@@ -1,0 +1,301 @@
+---
+const faqItems = [
+  {
+    q: 'What is your typical turnaround time?',
+    a: 'Turnaround time is 2-3 business days from the date I receive your product. Rush delivery (2 days) is available as an add-on.'
+  },
+  {
+    q: 'Do you write the scripts yourself?',
+    a: 'Yes! Every campaign includes concept-driven scriptwriting. I research your target demographic, write customized hooks, and create a visual outline.'
+  },
+  {
+    q: 'Can we reuse the videos for paid ads?',
+    a: 'Absolutely. All deliverables include organic usage rights. Paid ad usage licenses can be tailored based on your campaign runtime.'
+  }
+];
+---
+
+<section id="contact" class="contact-section">
+  <div class="container contact-grid">
+    <!-- Left Column: FAQ Section -->
+    <div class="contact-info-panel">
+      <div class="info-header">
+        <h2 class="info-title">Let's Create <span class="text-gradient">Something Iconic</span></h2>
+        <p class="info-desc">Reach out directly to discuss video concepts, request custom deliverables, or schedule a campaign discovery call.</p>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="faq-section">
+        <h3 class="faq-title">Frequently Asked Questions</h3>
+        <div class="faq-list">
+          {faqItems.map((faq) => (
+            <div class="faq-item glass-panel">
+              <h4 class="faq-question">{faq.q}</h4>
+              <p class="faq-answer">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Direct Contact Card -->
+    <div class="contact-channels-panel glass-panel-elevated">
+      <h3 class="channels-title">Direct Connection</h3>
+      <p class="channels-subtitle">Skip the forms. Connect with me directly for rates, concept discussions, or booking details.</p>
+
+      <div class="channels-list">
+        <!-- Phone Block -->
+        <a href="tel:+919311734258" class="channel-card glass-panel">
+          <div class="channel-icon-box phone-color">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="channel-svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="channel-info">
+            <span class="channel-label">CALL OR WHATSAPP</span>
+            <span class="channel-value">+91 9311734258</span>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
+
+        <!-- Email Block -->
+        <a href="mailto:rahulkumardrop@gmail.com" class="channel-card glass-panel">
+          <div class="channel-icon-box email-color">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="channel-svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="channel-info">
+            <span class="channel-label">EMAIL INQUIRIES</span>
+            <span class="channel-value">rahulkumardrop@gmail.com</span>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
+
+        <!-- Location Block -->
+        <div class="channel-card static-channel glass-panel">
+          <div class="channel-icon-box location-color">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="channel-svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="channel-info">
+            <span class="channel-label">LOCATION</span>
+            <span class="channel-value">Delhi, India</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="action-footer">
+        <a href="mailto:rahulkumardrop@gmail.com" class="btn-primary start-email-btn">Start A Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    position: relative;
+    border-top: 1px solid var(--border-subtle);
+    background: linear-gradient(to bottom, var(--bg-surface-elevated) 0%, var(--bg-base) 100%);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
+    align-items: flex-start;
+  }
+
+  /* Left Column: FAQ Section */
+  .contact-info-panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+  }
+
+  .info-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 48px;
+  }
+
+  /* FAQs */
+  .faq-section {
+    margin-bottom: 24px;
+  }
+
+  .faq-title {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .faq-item {
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+  }
+
+  .faq-answer {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* Right Column: Channels Panel */
+  .contact-channels-panel {
+    padding: 48px;
+    border-radius: var(--radius-lg);
+    background: var(--bg-surface);
+  }
+
+  .channels-title {
+    font-size: 1.75rem;
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
+  .channels-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+  }
+
+  .channels-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  .channel-card {
+    display: flex;
+    align-items: center;
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.01);
+    transition: var(--transition-smooth);
+    width: 100%;
+    text-align: left;
+  }
+
+  .channel-card:not(.static-channel):hover {
+    transform: translateY(-3px);
+    border-color: rgba(79, 70, 229, 0.2);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.08);
+  }
+
+  .channel-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+    flex-shrink: 0;
+  }
+
+  .phone-color {
+    background: rgba(13, 148, 136, 0.08);
+    color: #0d9488;
+  }
+
+  .email-color {
+    background: rgba(79, 70, 229, 0.08);
+    color: #4f46e5;
+  }
+
+  .location-color {
+    background: rgba(219, 39, 119, 0.08);
+    color: #db2777;
+  }
+
+  .channel-svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .channel-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .channel-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+  }
+
+  .channel-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .channel-arrow {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    transition: var(--transition-fast);
+    margin-left: 8px;
+  }
+
+  .channel-card:hover .channel-arrow {
+    transform: translateX(4px);
+    color: var(--primary);
+  }
+
+  .action-footer {
+    width: 100%;
+  }
+
+  .start-email-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 992px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .contact-channels-panel {
+      padding: 32px 20px;
+    }
+
+    .info-title {
+      font-size: 2.25rem;
+    }
+    
+    .channel-value {
+      font-size: 0.95rem;
+    }
+  }
+</style>

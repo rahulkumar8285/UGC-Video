@@ -1,0 +1,182 @@
+---
+---
+<footer class="main-footer">
+  <div class="container footer-content">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>
+        NUVORA<span class="logo-accent">.AI</span>
+      </a>
+      <p class="brand-pitch">High-converting UGC video ads and premium brand photography for high-growth e-commerce brands.</p>
+    </div>
+
+    <div class="footer-links">
+      <div class="link-group">
+        <h4>Navigation</h4>
+        <a href="#portfolio">Work</a>
+        <a href="#contact">Get in Touch</a>
+      </div>
+      
+      <div class="link-group">
+        <h4>Socials</h4>
+        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p class="copyright">&copy; {new Date().getFullYear()} Nuvora UGC. All rights reserved.</p>
+    <a href="#" class="back-to-top">
+      Back to top <span class="arrow">↑</span>
+    </a>
+  </div>
+</footer>
+
+<style>
+  .main-footer {
+    background-color: #030305;
+    border-top: 1px solid var(--border-subtle);
+    padding: 80px 0 40px 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    margin-bottom: 60px;
+  }
+
+  .footer-brand {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+  }
+
+  .logo-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary);
+  }
+
+  .logo-accent {
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+  .brand-pitch {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Footer Links */
+  .footer-links {
+    display: flex;
+    gap: 80px;
+  }
+
+  .link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .link-group h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+  }
+
+  .link-group a {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    transition: var(--transition-fast);
+  }
+
+  .link-group a:hover {
+    color: var(--primary);
+    transform: translateX(2px);
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 40px;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .back-to-top {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .back-to-top:hover {
+    color: var(--primary);
+  }
+
+  .arrow {
+    transition: var(--transition-fast);
+  }
+
+  .back-to-top:hover .arrow {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .footer-links {
+      gap: 48px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-links {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .footer-bottom {
+      flex-direction: column-reverse;
+      gap: 20px;
+      align-items: flex-start;
+    }
+  }
+</style>

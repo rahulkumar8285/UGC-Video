@@ -1,0 +1,324 @@
+---
+interface ServicePackage {
+  name: string;
+  price: string;
+  description: string;
+  isPopular?: boolean;
+  features: string[];
+}
+
+const packages: ServicePackage[] = [
+  {
+    name: 'Single Ad Starter',
+    price: 'Contact for Rates',
+    description: 'Perfect for brands looking to test new concepts or launch a single product campaign.',
+    features: [
+      '1 Custom High-Converting Video',
+      '2 Hook Variations (Total of 2 edits)',
+      'Trend & Competitor Research',
+      'Professional Scriptwriting & Editing',
+      '30-Day Organic Usage Rights',
+      '1 Free Round of Revision'
+    ]
+  },
+  {
+    name: 'Growth Ad Bundle',
+    price: 'Request a Quote',
+    description: 'Our most popular package. Build a solid ad testing framework with multiple assets.',
+    isPopular: true,
+    features: [
+      '3 Custom UGC Videos (9:16 Format)',
+      '3 Hook Variations per video (Total 9 assets)',
+      'Concept Ideation & Scriptwriting',
+      'Native Text Overlay & Captions',
+      'Trending Audio Integration',
+      '90-Day Paid Ad Usage Rights',
+      '2 Rounds of Revisions'
+    ]
+  },
+  {
+    name: 'Monthly Scale Retainer',
+    price: 'Custom Retainer',
+    description: 'Keep your ad accounts fresh with a steady stream of converting assets every month.',
+    features: [
+      '8 Custom Videos per month',
+      '2 Hook & 2 CTA variations per video',
+      'Dedicated Slack Communication Channel',
+      'Monthly Performance Review & Optimization',
+      'Full Raw Footage Delivery Included',
+      'Perpetual Paid Ad Usage Rights',
+      'Unlimited Revisions'
+    ]
+  }
+];
+
+const addons = [
+  { name: 'Extra Hook Variation', desc: 'Add a new 3-second hook to test different scroll-stoppers.' },
+  { name: 'Raw Footage Delivery', desc: 'Get all the raw, unedited clips for your in-house team to repurpose.' },
+  { name: 'Additional Revision Round', desc: 'Add extra rounds of changes after delivery.' },
+  { name: 'TikTok Spark Ad Code Setup', desc: 'Generate and configure Spark Ad codes for direct advertising.' }
+];
+---
+
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Packages <span class="text-gradient">& Rates</span></h2>
+      <p class="section-subtitle">Get high-converting content with tailored packages. Every package includes concept strategy, filming, and post-production.</p>
+    </div>
+
+    <!-- Pricing Cards Grid -->
+    <div class="pricing-grid">
+      {packages.map((pkg) => (
+        <div class={`pricing-card glass-panel ${pkg.isPopular ? 'popular-card' : ''}`}>
+          {pkg.isPopular && (
+            <div class="popular-badge">
+              🔥 MOST POPULAR
+            </div>
+          )}
+          
+          <div class="card-top">
+            <h3 class="package-name">{pkg.name}</h3>
+            <div class="package-price">
+              <span class="price-val text-gradient">{pkg.price}</span>
+            </div>
+            <p class="package-desc">{pkg.description}</p>
+          </div>
+
+          <ul class="package-features">
+            {pkg.features.map((feature) => (
+              <li class="feature-item">
+                <span class="check-icon">✓</span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+
+          <div class="card-bottom">
+            <a href="#contact" class={`btn-cta ${pkg.isPopular ? 'btn-primary' : 'btn-secondary'}`}>
+              Book This Package
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Add-ons Section -->
+    <div class="addons-container glass-panel-elevated">
+      <h3 class="addons-title"><span class="text-gradient">Optional Add-ons</span> & Extras</h3>
+      <p class="addons-subtitle">Customize your order to fit your exact campaign requirements.</p>
+      
+      <div class="addons-grid">
+        {addons.map((addon) => (
+          <div class="addon-card">
+            <div class="addon-header">
+              <h4 class="addon-name">{addon.name}</h4>
+            </div>
+            <p class="addon-desc">{addon.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-section {
+    position: relative;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    margin-bottom: 16px;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  /* Pricing Grid */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    align-items: stretch;
+    margin-bottom: 80px;
+  }
+
+  .pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    position: relative;
+  }
+
+  .popular-card {
+    border-color: rgba(0, 242, 255, 0.3);
+    background: rgba(22, 23, 32, 0.8);
+    box-shadow: 0 10px 40px var(--primary-glow);
+    transform: scale(1.03);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--accent) 0%, #f43f5e 100%);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  }
+
+  .package-name {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    font-family: var(--font-heading);
+  }
+
+  .package-price {
+    margin-bottom: 20px;
+  }
+
+  .price-val {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
+  .package-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 32px;
+    min-height: 54px;
+  }
+
+  /* Features List */
+  .package-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-grow: 1;
+  }
+
+  .feature-item {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .check-icon {
+    color: var(--primary);
+    font-weight: bold;
+    text-shadow: 0 0 8px var(--primary-glow);
+  }
+
+  .btn-cta {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Add-ons Section */
+  .addons-container {
+    padding: 60px;
+    border-radius: var(--radius-lg);
+  }
+
+  .addons-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .addons-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .addons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .addon-card {
+    padding: 24px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    transition: var(--transition-fast);
+  }
+
+  .addon-card:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .addon-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .addon-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .addon-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 992px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .popular-card {
+      transform: scale(1);
+    }
+
+    .addons-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .addons-container {
+      padding: 32px 20px;
+    }
+    
+    .section-title {
+      font-size: 2.25rem;
+    }
+  }
+</style>
