@@ -13,70 +13,70 @@ interface PortfolioItem {
 
 const portfolioItems: PortfolioItem[] = [
   {
-    id: 'ugc-1',
-    title: 'Kinetic Skin Serum Unboxing',
+    id: 'ugc-cloth',
+    title: 'Premium Streetwear Apparel Showcase',
     category: 'video',
     categoryLabel: 'Video Ad',
-    mediaUrl: 'https://assets.mixkit.co/videos/preview/mixkit-skin-care-product-being-applied-40439-large.mp4',
-    posterUrl: '/images/poster-skin.jpg',
-    brand: 'Kinetic Beauty',
-    metrics: '+45% Hook Rate',
-    description: 'A native unboxing video demonstrating the application and immediate glow effect of the serum.'
+    mediaUrl: '/portfolio/Cloth/project/Final-Output.mp4',
+    posterUrl: '/images/hero-ugc.jpg',
+    brand: 'Apex Apparel',
+    metrics: '+54% Hook Rate',
+    description: 'Aesthetic apparel reel highlighting texture, fit, and movement in real-world lighting.'
   },
   {
-    id: 'ugc-2',
-    title: 'Aura Minimalist Skincare Jar',
-    category: 'photo',
-    categoryLabel: 'Product Photo',
-    mediaUrl: '/images/skincare-product.jpg',
-    posterUrl: '/images/skincare-product.jpg',
-    brand: 'Aura Organic',
-    metrics: 'Used for IG Ads',
-    description: 'High-end aesthetic product photography highlighting the natural texture and organic feel of the jar.'
+    id: 'ugc-jewellery-1',
+    title: 'Aesthetic Gold Jewelry Close-Up',
+    category: 'video',
+    categoryLabel: 'Video Ad',
+    mediaUrl: '/portfolio/artificial%20jewellery/Project-1/Final%20Export.mp4',
+    posterUrl: '/portfolio/artificial%20jewellery/Project-1/product-ref.avif',
+    brand: 'Luxe Aura',
+    metrics: '3.2x ROAS Generated',
+    description: 'Elegant showcase of minimalist gold jewelry highlighting premium craftsmanship.'
   },
   {
-    id: 'ugc-3',
-    title: 'Barista Drip Coffee Reel',
+    id: 'ugc-jewellery-2',
+    title: 'Minimalist Ring & Bracelet Showcase',
     category: 'video',
     categoryLabel: 'TikTok/Reel',
-    mediaUrl: 'https://assets.mixkit.co/videos/preview/mixkit-coffee-maker-pouring-hot-coffee-into-a-cup-42211-large.mp4',
-    posterUrl: '/images/poster-coffee.jpg',
-    brand: 'Equator Coffee',
-    metrics: '120k+ Views Organic',
-    description: 'Cinematic ASMR-style morning coffee routine making process to capture aesthetic lifestyle vibes.'
+    mediaUrl: '/portfolio/artificial%20jewellery/Project-2/Demo.mp4',
+    posterUrl: '/portfolio/artificial%20jewellery/Project-2/Product-ref-1.webp',
+    brand: 'Luxe Aura',
+    metrics: '180k+ Organic Views',
+    description: 'Dynamic TikTok-style close-up demonstration of fine jewelry rings and bracelets.'
   },
   {
-    id: 'ugc-4',
-    title: 'Lumina Wireless Earbuds',
-    category: 'photo',
-    categoryLabel: 'Product Photo',
-    mediaUrl: '/images/earbuds-product.jpg',
-    posterUrl: '/images/earbuds-product.jpg',
-    brand: 'Lumina Audio',
-    metrics: '3.8% CTR on Web',
-    description: 'Sleek product shot featuring the earbuds on a dark reflective surface with futuristic neon highlights.'
-  },
-  {
-    id: 'ugc-5',
-    title: 'Activewear Yoga Testimonial',
+    id: 'ugc-jewellery-3',
+    title: 'Premium Bridal Jewelry Collection',
     category: 'video',
     categoryLabel: 'Video Review',
-    mediaUrl: 'https://assets.mixkit.co/videos/preview/mixkit-woman-doing-yoga-on-a-mat-42358-large.mp4',
-    posterUrl: '/images/poster-yoga.jpg',
-    brand: 'ZenFit Activewear',
-    metrics: '2.8x ROAS Generated',
-    description: 'Problem-agitate-solve style hook followed by a fitness enthusiast testing the wearability and durability of the activewear.'
+    mediaUrl: '/portfolio/artificial%20jewellery/Project-3/Final.mp4',
+    posterUrl: '/images/hero-ugc.jpg',
+    brand: 'Luxe Aura',
+    metrics: '5.1% Conversion Rate',
+    description: 'Cinematic visual reel showing details of the premium bridal jewelry collection.'
   },
   {
-    id: 'ugc-6',
-    title: 'Vanguard Chrono Smartwatch',
-    category: 'photo',
-    categoryLabel: 'Product Photo',
-    mediaUrl: '/images/smartwatch-product.jpg',
-    posterUrl: '/images/smartwatch-product.jpg',
-    brand: 'Vanguard Tech',
-    metrics: '5.2% Conversions',
-    description: 'Premium editorial layout highlighting the modern contours and digital face of the smartwatch.'
+    id: 'ugc-massager-1',
+    title: 'Smart Therapy Massage Gun Demo',
+    category: 'video',
+    categoryLabel: 'Video Ad',
+    mediaUrl: '/portfolio/massager/project-1/Final-Rendor.mp4',
+    posterUrl: '/portfolio/massager/project-1/Lifestyle%20Image%20v-3.png',
+    brand: 'TheraRelief',
+    metrics: '4.2% CTR on TikTok',
+    description: 'High-converting problem-solution style video showcasing product benefits and design aesthetics.'
+  },
+  {
+    id: 'ugc-jewellery-4',
+    title: 'Luxurious Gemstone Ad Collection',
+    category: 'video',
+    categoryLabel: 'Video Ad',
+    mediaUrl: '/portfolio/artificial%20jewellery/Project-4/clip-5.mp4',
+    posterUrl: '/images/hero-ugc.jpg',
+    brand: 'Luxe Aura',
+    metrics: '4.8% Purchase Rate',
+    description: 'High-converting video showcasing premium handcrafted gemstone jewelry.'
   }
 ];
 ---
@@ -99,25 +99,27 @@ const portfolioItems: PortfolioItem[] = [
     <!-- Grid Container -->
     <div class="portfolio-grid" id="portfolioGrid">
       {portfolioItems.map((item) => (
-        <div class="portfolio-card glass-panel" data-category={item.category} data-title={item.title} data-brand={item.brand} data-description={item.description} data-media={item.mediaUrl} data-type={item.category}>
+        <div class="portfolio-card glass-panel" data-category={item.category} data-title={item.title} data-brand={item.brand} data-description={item.description} data-media={item.mediaUrl} data-type={item.category} data-metrics={item.metrics || ''}>
           <div class="card-media-wrapper">
             {item.category === 'video' ? (
-              <div class="video-container">
-                <video 
-                  class="portfolio-video" 
-                  muted 
-                  loop 
-                  playsinline 
-                  preload="metadata"
-                  poster={item.posterUrl}
-                >
-                  <source src={item.mediaUrl} type="video/mp4" />
-                </video>
-                <div class="video-play-hint">
-                  <span class="hint-icon">▶</span>
-                  <span class="hint-text">Hover to Play</span>
+                 <div class="video-container">
+                   <video 
+                     class="portfolio-video" 
+                     muted 
+                     loop 
+                     playsinline 
+                     preload="metadata"
+                   >
+                     <source src={`${item.mediaUrl}#t=0.001`} type="video/mp4" />
+                   </video>
+                  <div class="video-play-hint">
+                    <span class="hint-icon">▶</span>
+                    <span class="hint-text">Hover to Play</span>
+                  </div>
+                  <button class="volume-btn" aria-label="Toggle Mute" title="Mute/Unmute">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="22" y1="9" x2="16" y2="15"></line><line x1="16" y1="9" x2="22" y2="15"></line></svg>
+                  </button>
                 </div>
-              </div>
             ) : (
               <img src={item.mediaUrl} alt={item.title} class="portfolio-img" loading="lazy" />
             )}
@@ -143,26 +145,7 @@ const portfolioItems: PortfolioItem[] = [
     </div>
   </div>
 
-  <!-- Lightbox Modal -->
-  <div class="lightbox-modal" id="lightbox">
-    <div class="lightbox-overlay" id="lightboxOverlay"></div>
-    <div class="lightbox-content glass-panel-elevated">
-      <button class="lightbox-close" id="lightboxClose" aria-label="Close Preview">&times;</button>
-      
-      <div class="lightbox-media-container" id="lightboxMediaContainer">
-        <!-- Dynamic Media Injected Here -->
-      </div>
-      
-      <div class="lightbox-details">
-        <div class="lightbox-meta">
-          <span class="lightbox-brand" id="lightboxBrand">Brand Name</span>
-          <span class="lightbox-category" id="lightboxCategory">Category</span>
-        </div>
-        <h3 class="lightbox-title" id="lightboxTitle">Project Title</h3>
-        <p class="lightbox-desc" id="lightboxDesc">Project description goes here.</p>
-      </div>
-    </div>
-  </div>
+  <!-- Lightbox Modal Removed -->
 </section>
 
 <script is:inline>
@@ -196,6 +179,7 @@ const portfolioItems: PortfolioItem[] = [
     videoContainers.forEach(container => {
       const video = container.querySelector('.portfolio-video');
       const hint = container.querySelector('.video-play-hint');
+      const volumeBtn = container.querySelector('.volume-btn');
 
       container.addEventListener('mouseenter', () => {
         if (video) {
@@ -209,67 +193,35 @@ const portfolioItems: PortfolioItem[] = [
           video.pause();
           video.currentTime = 0;
           if (hint) hint.style.opacity = '1';
+          
+          // Reset to muted when mouse leaves so it starts cleanly next time
+          video.muted = true;
+          if (volumeBtn) {
+            volumeBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="22" y1="9" x2="16" y2="15"></line><line x1="16" y1="9" x2="22" y2="15"></line></svg>`;
+          }
         }
       });
     });
 
-    // 3. Lightbox Preview Logic
-    const lightbox = document.getElementById('lightbox');
-    const lightboxOverlay = document.getElementById('lightboxOverlay');
-    const lightboxClose = document.getElementById('lightboxClose');
-    const mediaContainer = document.getElementById('lightboxMediaContainer');
-    const lTitle = document.getElementById('lightboxTitle');
-    const lBrand = document.getElementById('lightboxBrand');
-    const lCategory = document.getElementById('lightboxCategory');
-    const lDesc = document.getElementById('lightboxDesc');
-
-    cards.forEach(card => {
-      card.addEventListener('click', () => {
-        const title = card.getAttribute('data-title');
-        const brand = card.getAttribute('data-brand');
-        const desc = card.getAttribute('data-description');
-        const mediaUrl = card.getAttribute('data-media');
-        const type = card.getAttribute('data-type');
-
-        lTitle.textContent = title;
-        lBrand.textContent = brand;
-        lCategory.textContent = type === 'video' ? 'Video Project' : type === 'photo' ? 'Creative Photography' : 'Social Review';
-        lDesc.textContent = desc;
-
-        // Clear previous media
-        mediaContainer.innerHTML = '';
-
-        if (type === 'video') {
-          const videoElement = document.createElement('video');
-          videoElement.src = mediaUrl;
-          videoElement.controls = true;
-          videoElement.autoplay = true;
-          videoElement.classList.add('lightbox-video');
-          mediaContainer.appendChild(videoElement);
-        } else {
-          const imgElement = document.createElement('img');
-          imgElement.src = mediaUrl;
-          imgElement.alt = title;
-          imgElement.classList.add('lightbox-img');
-          mediaContainer.appendChild(imgElement);
+    // 3. Mute/Unmute Logic
+    const volumeBtns = document.querySelectorAll('.volume-btn');
+    volumeBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Stop click from propagating
+        const videoContainer = btn.closest('.video-container');
+        const video = videoContainer.querySelector('.portfolio-video');
+        
+        if (video) {
+          video.muted = !video.muted;
+          
+          if (video.muted) {
+            btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="22" y1="9" x2="16" y2="15"></line><line x1="16" y1="9" x2="22" y2="15"></line></svg>`;
+          } else {
+            btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>`;
+          }
         }
-
-        // Open Lightbox
-        lightbox.classList.add('active');
-        document.body.classList.add('no-scroll');
       });
     });
-
-    // Close Lightbox
-    const closeLightbox = () => {
-      lightbox.classList.remove('active');
-      document.body.classList.remove('no-scroll');
-      // Stop any playing video
-      mediaContainer.innerHTML = '';
-    };
-
-    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-    if (lightboxOverlay) lightboxOverlay.addEventListener('click', closeLightbox);
   });
 </script>
 
@@ -346,7 +298,7 @@ const portfolioItems: PortfolioItem[] = [
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    cursor: pointer;
+    cursor: default; /* Remove click cursor since modal is removed */
     background: var(--bg-surface);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
@@ -473,142 +425,45 @@ const portfolioItems: PortfolioItem[] = [
     line-height: 1.5;
   }
 
-  /* Lightbox Modal */
-  .lightbox-modal {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
+  /* Volume Button Overlay */
+  .volume-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(15, 23, 42, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    color: var(--text-primary);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: var(--transition-smooth);
     opacity: 0;
     pointer-events: none;
-    transition: var(--transition-smooth);
   }
 
-  .lightbox-modal.active {
+  .video-container:hover .volume-btn {
     opacity: 1;
     pointer-events: auto;
   }
 
-  .lightbox-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
-
-  .lightbox-content {
-    position: relative;
-    z-index: 1001;
-    width: 100%;
-    max-width: 900px;
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35);
-    background: var(--bg-surface);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .lightbox-close {
-    position: absolute;
-    top: 16px;
-    right: 20px;
-    font-size: 2.25rem;
-    color: var(--text-secondary);
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1002;
-    transition: var(--transition-fast);
-  }
-
-  .lightbox-close:hover {
-    color: var(--text-primary);
+  .volume-btn:hover {
     transform: scale(1.1);
-  }
-
-  .lightbox-media-container {
-    width: 100%;
-    aspect-ratio: 9 / 12;
-    background-color: #0c0d12;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .lightbox-video, .lightbox-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .lightbox-details {
-    padding: 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: var(--bg-surface);
-    text-align: left;
-  }
-
-  .lightbox-meta {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .lightbox-brand {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1rem;
+    background: #ffffff;
     color: var(--primary);
   }
 
-  .lightbox-category {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .lightbox-title {
-    font-size: 2.25rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    letter-spacing: -0.02em;
-  }
-
-  .lightbox-desc {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-  }
-
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     .portfolio-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
-    }
-
-    .lightbox-content {
-      grid-template-columns: 1fr;
-      max-width: 480px;
-    }
-
-    .lightbox-media-container {
-      aspect-ratio: 9 / 12;
-    }
-
-    .lightbox-details {
-      padding: 24px;
     }
   }
 
@@ -619,10 +474,6 @@ const portfolioItems: PortfolioItem[] = [
 
     .section-title {
       font-size: 2.25rem;
-    }
-
-    .lightbox-modal {
-      padding: 16px;
     }
   }
 </style>
